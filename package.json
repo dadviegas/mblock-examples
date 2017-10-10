@@ -1,0 +1,40 @@
+{
+  "name": "mblock-examples",
+  "version": "0.0.0",
+  "description": "mblock monorepo",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "npm:lerna": "lerna exec \"echo package-lock=false >> .npmrc\"",
+    "outdated": "lerna outdated",
+    "init": "lerna init",
+    "build": "lerna run build",
+    "build:production": "lerna run build:production",
+    "bootstrap": "lerna bootstrap",
+    "bootstrap:hoist": "lerna bootstrap --hoist",
+    "clean": "lerna clean && rm -rf node_modules",
+    "clean:packages": "lerna clean && rm -rf node_modules",
+    "publish": "npm run build && lerna publish",
+    "postinstall": "npm run bootstrap:hoist",
+    "start:dynamic": "lerna exec --scope mblock-dynamic-react -- npm run start",
+    "start:play": "lerna exec --scope mblock-play-react -- npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dadviegas/mBlock.git"
+  },
+  "keywords": [
+    "dynamic blokc react"
+  ],
+  "author": "dadviegas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dadviegas/mBlock/issues"
+  },
+  "homepage": "https://github.com/dadviegas/mBlock#readme",
+  "dependencies": {
+    "lerna": "^2.2.0"
+  }
+}
