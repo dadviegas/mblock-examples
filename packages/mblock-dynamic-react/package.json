@@ -2,15 +2,13 @@
   "name": "mblock-dynamic-react",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "clean-lib": "rimraf ./dist",
     "prebuild": "npm run clean-lib",
     "build": "webpack --display-error-details",
     "build:develoment": "cross-env NODE_ENV=development npm run build",
     "build:production": "cross-env NODE_ENV=production npm run build",
-    "start": "cross-env NODE_ENV=development webpack-dev-server --hot --history-api-fallback --open",
-    "prod": "node build.js production server"
+    "start": "cross-env NODE_ENV=development webpack-dev-server --hot --history-api-fallback --open"
   },
   "author": "dadviegas",
   "license": "ISC",
