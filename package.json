@@ -20,7 +20,8 @@
     "postinstall": "npm run bootstrap:hoist",
     "start:dynamic": "lerna exec --scope mblock-dynamic-react -- npm run start",
     "start:play": "lerna exec --scope mblock-play-react -- npm run start",
-    "start:dllvendor": "lerna exec --scope mblock-dll-vendor -- npm run start"
+    "start:dllvendor": "lerna exec --scope mblock-dll-vendor -- npm run start",
+    "vendor": "lerna exec --scope mblock-dll-vendor -- npm run vendor:development"
   },
   "repository": {
     "type": "git",

@@ -2,7 +2,7 @@ import { join } from 'path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import webpack from 'webpack'
 import { use, build, configuration } from 'mblock-module'
-import { babel, entry, output, enviromnent, resolve, extractCss, file, uglify, commonsChunk, html, devServer } from 'mblock-module/plugins'
+import { base, babel, entry, output, enviromnent, resolve, extractCss, file, uglify, commonsChunk, html, devServer, dllReference } from 'mblock-module/plugins'
 import { hotReload } from 'mblock-react/plugins'
 
 const sourcePath = join(__dirname, 'src')
@@ -14,13 +14,6 @@ use(
   entry({
     index: [
       './index'
-    ],
-    vendor: [
-      'react',
-      'react-dom',
-      'react-router',
-      'react-router-dom',
-      'semantic-ui-react'
     ]
   }),
   output({
@@ -34,20 +27,17 @@ use(
   extractCss({ filename: 'style.css' }),
   file(),
   uglify(),
-  commonsChunk({names: ['vendor', 'common']}),
   html({
     title: 'React Boilerplate',
     template: join(__dirname, 'src', 'index.ejs'),
   }),
-  devServer()
+  devServer(),
+  dllReference({
+    context: process.cwd(),
+    manifest: require(join(outputPath, 'vendor.json'))
+  }),
+  base({ context: sourcePath })
 )
 
-configuration({
-  context: sourcePath
-})
-
-export default (env) => {
-  const conf = build({env})
-  return conf
-}
+export default build
 

@@ -4,16 +4,20 @@
   "description": "test dll vendor for app ",
   "scripts": {
     "clean-lib": "rimraf ./dist",
-    "prebuild": "npm run clean-lib",
-    "build": "webpack --display-error-details",
+    "prebuild:develoment": "npm run clean-lib && npm run vendor:develoment",
+    "prebuild:production": "npm run clean-lib && npm run vendor:production",
+    "build": "webpack",
     "build:develoment": "cross-env NODE_ENV=development npm run build",
     "build:production": "cross-env NODE_ENV=production npm run build",
-    "start": "cross-env NODE_ENV=development webpack-dev-server --hot --history-api-fallback --open"
+    "start": "cross-env NODE_ENV=development webpack-dev-server --hot --history-api-fallback --open",
+    "vendor:development": "cross-env NODE_ENV=develoment webpack --config webpack.config.vendor.babel.js",
+    "vendor:production": "cross-env NODE_ENV=production webpack --config webpack.config.vendor.babel.js",
+    "http-server": "http-server ./dist"
   },
   "author": "dadviegas",
   "license": "ISC",
   "devDependencies": {
-    "mblock-react": "0.0.46"
+    "mblock-react": "0.0.64"
   },
   "babel": {
     "presets": [
