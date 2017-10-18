@@ -17,7 +17,7 @@
   "author": "dadviegas",
   "license": "ISC",
   "devDependencies": {
-    "mblock-react": "0.0.64"
+    "mblock-react": "0.0.67"
   },
   "babel": {
     "presets": [
