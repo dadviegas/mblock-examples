@@ -31,8 +31,5 @@ use(
   })
 )
 
-export default (env) => {
-  const conf = build({env})
-  return conf
-}
+export default build
 

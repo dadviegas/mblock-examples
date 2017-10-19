@@ -1,8 +1,24 @@
 import { join } from 'path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import { use, build } from 'mblock-module'
-import { base, babel, entry, output, enviromnent, resolve, extractCss, file, uglify, commonsChunk, html, devServer, dllReference } from 'mblock-module/plugins'
 import { hotReload } from 'mblock-react/plugins'
+import {
+  base,
+  babel,
+  entry,
+  output,
+  enviromnent,
+  resolve,
+  extractCss,
+  file,
+  uglify,
+  commonsChunk,
+  html,
+  devServer,
+  dllReference,
+  compression
+} from 'mblock-module/plugins'
+
 
 const sourcePath = join(__dirname, 'src')
 const outputPath = join(__dirname, 'dist')
@@ -37,11 +53,8 @@ use(
   }),
   base({
     context: sourcePath
-  })
+  }),
+  compression()
 )
 
-export default (env) => {
-  const conf = build({env})
-  return conf
-}
-
+export default build
