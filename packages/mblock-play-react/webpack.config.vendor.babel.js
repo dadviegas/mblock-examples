@@ -1,7 +1,8 @@
 import { join } from 'path'
 import { use, build, configuration } from 'mblock-module'
-import { entry, output, enviromnent, uglify, dllCreate } from 'mblock-module/plugins'
+import { entry, output, enviromnent, uglify, dllCreate, base } from 'mblock-module/plugins'
 
+const sourcePath = join(__dirname, 'src')
 const outputPath = join(__dirname, 'dist')
 
 use(
@@ -24,12 +25,11 @@ use(
   dllCreate({
     name: '[name]',
     path: join(outputPath, '[name].json')
+  }),
+  base({
+    context: sourcePath
   })
 )
-
-configuration({
-  const sourcePath = join(__dirname, 'src')
-})
 
 export default (env) => {
   const conf = build({env})
