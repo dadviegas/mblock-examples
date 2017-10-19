@@ -1,12 +1,29 @@
 import { join } from 'path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import { use, build } from 'mblock-module'
-import { base, babel, entry, output, enviromnent, resolve, extractCss, file, uglify, commonsChunk, html, devServer, dllReference } from 'mblock-module/plugins'
 import { hotReload } from 'mblock-react/plugins'
+import pkg from './package'
+import {
+  base,
+  babel,
+  entry,
+  output,
+  enviromnent,
+  resolve,
+  extractCss,
+  file,
+  uglify,
+  commonsChunk,
+  html,
+  devServer,
+  dllReference,
+  compression
+} from 'mblock-module/plugins'
 
 const sourcePath = join(__dirname, 'src')
 const outputPath = join(__dirname, 'dist')
 const dllPath = join(__dirname, 'dll')
+
 
 use(
   babel(),
@@ -19,7 +36,7 @@ use(
   output({
     path: outputPath,
     chunkFilename: '[id].chunk.js',
-    filename: '[name].js',
+    filename: `[name].${pkg.version}.js`,
     publicPath: '/'
   }),
   enviromnent(),
@@ -29,7 +46,7 @@ use(
   uglify(),
   html({
     title: 'React Boilerplate',
-    template: join(__dirname, 'src', 'assets', 'index.ejs'),
+    template: join(__dirname, 'src', 'assets', 'index.ejs')
   }),
   devServer(),
   dllReference({
@@ -37,12 +54,12 @@ use(
     manifest: require(join(dllPath, 'vendor.json'))
   }),
   base({
-    context: sourcePath
+    context: sourcePath,
+  }),
+  compression({
+    asset: '[path].gz[query]'
   })
 )
 
-export default (env) => {
-  const conf = build({env})
-  return conf
-}
+export default build
 

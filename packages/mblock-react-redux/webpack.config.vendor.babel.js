@@ -12,7 +12,14 @@ use(
       'react-dom',
       'react-router',
       'react-router-dom',
-      'semantic-ui-react'
+      'semantic-ui-react',
+      'history',
+      'immutable',
+      'react-redux',
+      'react-router-redux',
+      'redux',
+      'redux-saga',
+      'reselect'
     ]
   }),
   output({
@@ -31,8 +38,5 @@ use(
   })
 )
 
-export default (env) => {
-  const conf = build({env})
-  return conf
-}
+export default build
 
