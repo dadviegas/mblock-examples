@@ -8,11 +8,11 @@ const outputPath = join(__dirname, 'dll')
 use(
   entry({
     vendor: [
+      'semantic-ui-react',
       'react',
       'react-dom',
       'react-router',
       'react-router-dom',
-      'semantic-ui-react',
       'history',
       'immutable',
       'react-redux',

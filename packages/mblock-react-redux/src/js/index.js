@@ -4,11 +4,11 @@ import { fromJS } from 'immutable';
 import createHistory from 'history/createHashHistory';
 import { syncHistoryWithStore } from 'react-router-redux';
 
-import routes from './common/app';
+import routes from './App';
 import Root from './Root';
 import configureStore from './redux/configureStore';
 
-import '../style/general.scss'
+// import '../style/general.scss'
 import render from 'mblock-react'
 
 let initialState = {};

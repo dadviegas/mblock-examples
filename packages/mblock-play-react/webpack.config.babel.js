@@ -48,7 +48,6 @@ use(
   }),
   devServer(),
   dllReference({
-    context: process.cwd(),
     manifest: require(join(outputPath, 'vendor.json'))
   }),
   base({

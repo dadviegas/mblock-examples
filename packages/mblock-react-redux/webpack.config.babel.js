@@ -41,7 +41,7 @@ use(
   }),
   enviromnent(),
   resolve({ mainFields: [ 'web', 'browser', 'module', 'jsnext:main', 'style', 'main' ] }),
-  extractCss({ filename: 'style.css' }),
+  // extractCss({ filename: 'style.css' }),
   file(),
   uglify(),
   html({
@@ -50,10 +50,11 @@ use(
   }),
   devServer(),
   dllReference({
-    context: process.cwd(),
+    // uses the webpack base context
     manifest: require(join(dllPath, 'vendor.json'))
   }),
   base({
+    devtool: 'none',
     context: sourcePath,
   }),
   compression({
