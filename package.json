@@ -21,6 +21,7 @@
     "start:dynamic": "lerna exec --scope mblock-dynamic-react -- npm run start",
     "start:play": "lerna exec --scope mblock-play-react -- npm run start",
     "start:react:redux": "lerna exec --scope mblock-play-react -- npm run start",
+    "start:blog": "lerna exec --scope mblock-blog -- npm run vendor:development",
     "vendor": "lerna exec --scope mblock-dll-vendor -- npm run vendor:development"
   },
   "repository": {
