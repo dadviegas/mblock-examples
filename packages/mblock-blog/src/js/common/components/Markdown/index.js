@@ -5,6 +5,8 @@ import MarkdownIt from 'markdown-it'
 var hljs = window.hljs
 
 const markdown = (markup) => {
+  console.log(1)
+
   var md = new MarkdownIt({
     highlight: function (str, lang) {
       if (lang && hljs.getLanguage(lang)) {
@@ -20,11 +22,23 @@ const markdown = (markup) => {
   })
   md.use(markdownItMermaid)
 
-  mermaid.initialize({startOnLoad: true, theme: 'forest'})
-
   return {
-    __html :md.render(markup)
+    __html : md.render(markup)
   }
 }
 
-export default ({source}) => (<div dangerouslySetInnerHTML={markdown(source)} />)
+export default class HighlightCode extends Component{
+  componentDidMount = () => {
+    mermaid.init({noteMargin: 10}, document.getElementsByClassName('mermaid'))
+  }
+
+  componentDidUpdate = () => {
+    mermaid.init({noteMargin: 10}, document.getElementsByClassName('mermaid'))
+  }
+
+  render() {
+    return (
+      <div dangerouslySetInnerHTML={markdown(this.props.source)} />
+    )
+  }
+}

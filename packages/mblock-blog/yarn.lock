@@ -2182,11 +2182,12 @@ fbjs@^0.8.16:
     setimmediate "^1.0.5"
     ua-parser-js "^0.7.9"
 
-file-loader@0.11.2:
-  version "0.11.2"
-  resolved "https://registry.yarnpkg.com/file-loader/-/file-loader-0.11.2.tgz#4ff1df28af38719a6098093b88c82c71d1794a34"
+file-loader@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/file-loader/-/file-loader-1.1.5.tgz#91c25b6b6fbe56dae99f10a425fd64933b5c9daa"
   dependencies:
     loader-utils "^1.0.2"
+    schema-utils "^0.3.0"
 
 filename-regex@^2.0.0:
   version "2.0.1"
@@ -2531,6 +2532,10 @@ hawk@~6.0.2:
 he@1.1.x, he@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/he/-/he-1.1.1.tgz#93410fd21b009735151f8868c2f271f3427e23fd"
+
+highlight@^0.2.4:
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/highlight/-/highlight-0.2.4.tgz#8ac02875b03f5935e0675852b76cfe1fd58e0dff"
 
 history@^4.7.2:
   version "4.7.2"
@@ -3084,6 +3089,12 @@ lcid@^1.0.0:
   dependencies:
     invert-kv "^1.0.0"
 
+linkify-it@^2.0.0:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/linkify-it/-/linkify-it-2.0.3.tgz#d94a4648f9b1c179d64fa97291268bdb6ce9434f"
+  dependencies:
+    uc.micro "^1.0.1"
+
 load-json-file@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/load-json-file/-/load-json-file-1.1.0.tgz#956905708d58b4bab4c2261b04f59f31c99374c0"
@@ -3217,6 +3228,31 @@ map-obj@^1.0.0, map-obj@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/map-obj/-/map-obj-1.0.1.tgz#d933ceb9205d82bdcf4886f6742bdc2b4dea146d"
 
+markdown-it-mermaid@^0.1.8:
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/markdown-it-mermaid/-/markdown-it-mermaid-0.1.8.tgz#b3f9eb7ffad98ca635ae53e804a86f4a9168a2f9"
+
+markdown-it@^8.4.0:
+  version "8.4.0"
+  resolved "https://registry.yarnpkg.com/markdown-it/-/markdown-it-8.4.0.tgz#e2400881bf171f7018ed1bd9da441dac8af6306d"
+  dependencies:
+    argparse "^1.0.7"
+    entities "~1.1.1"
+    linkify-it "^2.0.0"
+    mdurl "^1.0.1"
+    uc.micro "^1.0.3"
+
+markdown-loader@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/markdown-loader/-/markdown-loader-2.0.1.tgz#eed8bead82978bacf17b76a11c5593a013e2d976"
+  dependencies:
+    loader-utils "^1.1.0"
+    marked "^0.3.6"
+
+marked@^0.3.6:
+  version "0.3.6"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.6.tgz#b2c6c618fccece4ef86c4fc6cb8a7cbf5aeda8d7"
+
 math-expression-evaluator@^1.2.14:
   version "1.2.17"
   resolved "https://registry.yarnpkg.com/math-expression-evaluator/-/math-expression-evaluator-1.2.17.tgz#de819fdbcd84dccd8fae59c6aeb79615b9d266ac"
@@ -3231,25 +3267,24 @@ mblock-babel@^0.1.4:
     babel-preset-env "^1.6.0"
     babel-preset-stage-0 "^6.24.1"
 
-mblock-module@^0.1.69:
-  version "0.1.69"
-  resolved "https://registry.yarnpkg.com/mblock-module/-/mblock-module-0.1.69.tgz#8fda2b96a662649c48ae9cb1909423ab920dc75a"
+mblock-module@^0.1.70:
+  version "0.1.70"
+  resolved "https://registry.yarnpkg.com/mblock-module/-/mblock-module-0.1.70.tgz#596bb07e0813329dbaa0060076e57ace47280d4d"
   dependencies:
     css-loader "0.28.7"
     extract-text-webpack-plugin "^3.0.0"
-    file-loader "0.11.2"
-    mblock-webpack "^0.1.49"
+    file-loader "^1.1.5"
+    mblock-webpack "^0.1.50"
     node-sass "4.5.3"
     sass-loader "6.0.6"
-    style-loader "0.18.2"
-    url-loader "0.5.8"
+    style-loader "0.19.0"
 
-mblock-react@0.0.71:
-  version "0.0.71"
-  resolved "https://registry.yarnpkg.com/mblock-react/-/mblock-react-0.0.71.tgz#5c3dac46caeac40b8f3862847f321a6dddcf18fb"
+mblock-react@0.0.72:
+  version "0.0.72"
+  resolved "https://registry.yarnpkg.com/mblock-react/-/mblock-react-0.0.72.tgz#864dee6cedb3d0bdd533e33e7a737e8eeb401777"
   dependencies:
     babel-preset-react "^6.24.1"
-    mblock-module "^0.1.69"
+    mblock-module "^0.1.70"
     prop-types "^15.6.0"
     react "^16.0.0"
     react-dom "^16.0.0"
@@ -3281,9 +3316,9 @@ mblock-utils@^0.1.6:
     rimraf "^2.6.2"
     scripty "^1.7.2"
 
-mblock-webpack@^0.1.49:
-  version "0.1.49"
-  resolved "https://registry.yarnpkg.com/mblock-webpack/-/mblock-webpack-0.1.49.tgz#7af4d5ff2fde195a6c30eb64828b700a5f07f66c"
+mblock-webpack@^0.1.50:
+  version "0.1.50"
+  resolved "https://registry.yarnpkg.com/mblock-webpack/-/mblock-webpack-0.1.50.tgz#3cdafefa0e4413c5c58e35a474865f04c5642631"
   dependencies:
     babel-loader "^7.1.2"
     case-sensitive-paths-webpack-plugin "^2.1.1"
@@ -3292,6 +3327,7 @@ mblock-webpack@^0.1.49:
     html-webpack-plugin "^2.30.1"
     mblock-utils "^0.1.6"
     os "^0.1.1"
+    raw-loader "^0.5.1"
     webpack "^3.8.0"
     webpack-bundle-analyzer "^2.9.0"
     webpack-dev-server "2.8.2"
@@ -3304,7 +3340,7 @@ md5.js@^1.3.4:
     hash-base "^3.0.0"
     inherits "^2.0.1"
 
-"mdurl@~ 1.0.1":
+mdurl@^1.0.1, "mdurl@~ 1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/mdurl/-/mdurl-1.0.1.tgz#fe85b2ec75a59037f2adfec100fd6c601761152e"
 
@@ -3386,10 +3422,6 @@ mime-types@^2.1.12, mime-types@~2.1.15, mime-types@~2.1.16, mime-types@~2.1.17, 
   resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.17.tgz#09d7a393f03e995a79f8af857b70a9e0ab16557a"
   dependencies:
     mime-db "~1.30.0"
-
-mime@1.3.x:
-  version "1.3.6"
-  resolved "https://registry.yarnpkg.com/mime/-/mime-1.3.6.tgz#591d84d3653a6b0b4a3b9df8de5aa8108e72e5e0"
 
 mime@1.4.1, mime@^1.2.11, mime@^1.3.4:
   version "1.4.1"
@@ -4301,6 +4333,10 @@ raw-body@2.3.2:
     iconv-lite "0.4.19"
     unpipe "1.0.0"
 
+raw-loader@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/raw-loader/-/raw-loader-0.5.1.tgz#0c3d0beaed8a01c966d9787bf778281252a979aa"
+
 rc@^1.1.7:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/rc/-/rc-1.2.2.tgz#d8ce9cb57e8d64d9c7badd9876c7c34cbe3c7077"
@@ -5084,9 +5120,9 @@ strip-json-comments@~2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
 
-style-loader@0.18.2:
-  version "0.18.2"
-  resolved "https://registry.yarnpkg.com/style-loader/-/style-loader-0.18.2.tgz#cc31459afbcd6d80b7220ee54b291a9fd66ff5eb"
+style-loader@0.19.0:
+  version "0.19.0"
+  resolved "https://registry.yarnpkg.com/style-loader/-/style-loader-0.19.0.tgz#7258e788f0fee6a42d710eaf7d6c2412a4c50759"
   dependencies:
     loader-utils "^1.0.2"
     schema-utils "^0.3.0"
@@ -5213,6 +5249,10 @@ ua-parser-js@^0.7.9:
   version "0.7.17"
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.17.tgz#e9ec5f9498b9ec910e7ae3ac626a805c4d09ecac"
 
+uc.micro@^1.0.1, uc.micro@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/uc.micro/-/uc.micro-1.0.3.tgz#7ed50d5e0f9a9fb0a573379259f2a77458d50192"
+
 uglify-js@3.1.x:
   version "3.1.5"
   resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.1.5.tgz#4c1a6d53b2fe77e4710dd94631853effd3ff5143"
@@ -5280,13 +5320,6 @@ upper-case@^1.1.1:
 url-join@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/url-join/-/url-join-2.0.2.tgz#c072756967ad24b8b59e5741551caac78f50b8b7"
-
-url-loader@0.5.8:
-  version "0.5.8"
-  resolved "https://registry.yarnpkg.com/url-loader/-/url-loader-0.5.8.tgz#b9183b1801e0f847718673673040bc9dc1c715c5"
-  dependencies:
-    loader-utils "^1.0.2"
-    mime "1.3.x"
 
 url-parse@1.0.x:
   version "1.0.5"

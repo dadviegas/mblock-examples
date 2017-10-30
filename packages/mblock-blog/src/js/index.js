@@ -8,7 +8,7 @@ import routes from './App';
 import Root from './Root';
 import configureStore from './redux/configureStore';
 
-// import '../style/general.scss'
+import '../style/general.scss'
 import render from 'mblock-react'
 
 let initialState = {};

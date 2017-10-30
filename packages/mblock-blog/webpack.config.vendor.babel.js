@@ -33,10 +33,11 @@ use(
   dllCreate({
     name: '[name]',
     path: join(outputPath, '[name].json')
-  }),
-  base({
-    context: sourcePath
   })
+  // ,
+  // base({
+  //   context: sourcePath
+  // })
 )
 
 export default build
